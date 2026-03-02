@@ -26,6 +26,10 @@ int pturismo2;
 float densidade2;
 float pib_per_capita2;
 
+float superpoder1;
+float superpoder2;
+
+
 //Mensagem de boas vindas e início do cadastro da carta 1.
 printf("Vamos cadastrar a carta 1!\n");
 
@@ -112,7 +116,23 @@ printf("Densidade: %.2f Habitantes/Km²\n", densidade2);
 printf("PIB per capita: %.2f R$\n", pib_per_capita2);
 printf("Pontos de turismo: %d\n\n", pturismo2);
 
-//Fim do programa.
+//Cálculo do superpoder das cartas.
+superpoder1 = (densidade1 + pib_per_capita1 + pturismo1) / 3;
+superpoder2 = (densidade2 + pib_per_capita2 + pturismo2) / 3;
+printf("O superpoder da carta 1 é: %.2f\n", superpoder1);
+printf("O superpoder da carta 2 é: %.2f\n", superpoder2);
+
+//Comparação das cartas.
+printf("A carta 1 tem um superpoder maior que a carta 2? %d\n", superpoder1 > superpoder2);
+printf("A população da carta 1 é maior que a população da carta 2? %d\n", populacao1 > populacao2);
+printf("A área da carta 1 é maior que a área da carta 2? %d\n", area1 > area2);
+printf("O PIB da carta 1 é maior que o PIB da carta 2? %d\n", pib1 > pib2);
+printf("O número de pontos de turismo da carta 1 é maior que o número de pontos de turismo da carta 2? %d\n", 
+    pturismo1 > pturismo2);
+printf("A densidade da carta 1 é maior que a densidade da carta 2? %d\n", densidade1 > densidade2);
+printf("O PIB per capita da carta 1 é maior que o PIB per capita da carta 2? %d\n", pib_per_capita1 > pib_per_capita2);
+
+
 return 0;
 
 }
